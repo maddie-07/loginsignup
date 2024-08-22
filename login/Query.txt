@@ -1,0 +1,16 @@
+//database name = login
+CREATE TABLE `User` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
+    `password` VARCHAR(255),  -- `password` is optional, so NULL is allowed
+    `wardNumber` INT UNSIGNED NOT NULL,  -- Add wardNumber as a required field
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Admin` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`)
+);
